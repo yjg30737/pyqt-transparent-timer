@@ -11,6 +11,10 @@ PyQt5 >= 5.8
 * <a href="https://github.com/yjg30737/pyqt-notifier.git">pyqt-notifier</a>
 * <a href="https://github.com/yjg30737/pyqt-resource-helper.git">pyqt-resource-helper</a>
 
+## Usage
+* Press the escape button if you want to quit.
+* If you want to know more, see <a href="https://github.com/yjg30737/pyqt-timer/blob/main/README.md">README of pyqt-timer</a>
+
 ## Example
 Code Sample
 ```python
