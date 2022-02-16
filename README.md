@@ -42,4 +42,5 @@ When mouse cursor is hovering over the widget, border and background will show u
 Except for graphics, this module operates the same way as pyqt-timer.
 
 ## See also
-<a href="https://github.com/yjg30737/pyqt-timer.git">pyqt-timer</a>
+* <a href="https://github.com/yjg30737/pyqt-timer.git">pyqt-timer</a>
+* <a href="https://github.com/yjg30737/pyqt-timer-label.git">pyqt-timer-label</a>
