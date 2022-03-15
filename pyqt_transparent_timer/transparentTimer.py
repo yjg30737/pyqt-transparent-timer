@@ -1,6 +1,6 @@
-from PyQt5.QtGui import QFont, QPainter, QColor, QPen, QGradient
-from PyQt5.QtWidgets import QWidget, QLabel, QGridLayout, \
-    QApplication, QVBoxLayout, QHBoxLayout, QPushButton, QDialog, QSizePolicy, qApp
+from PyQt5.QtGui import QPainter, QColor, QPen, QGradient
+from PyQt5.QtWidgets import QWidget, QApplication, \
+    QVBoxLayout, QHBoxLayout, QPushButton, QDialog, QSizePolicy, qApp
 from PyQt5.QtCore import Qt, pyqtSignal, QTime, QTimer, QSettings
 from pyqt_notifier import NotifierWidget
 from pyqt_resource_helper import PyQtResourceHelper
