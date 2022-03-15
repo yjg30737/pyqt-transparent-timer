@@ -9,7 +9,7 @@ PyQt5 >= 5.8
 
 ## Included Packages
 * <a href="https://github.com/yjg30737/pyqt-notifier.git">pyqt-notifier</a>
-* <a href="https://github.com/yjg30737/pyqt-resource-helper.git">pyqt-resource-helper</a>
+* <a href="https://github.com/yjg30737/pyqt-svg-icon-pushbutton.git">pyqt-svg-icon-pushbutton</a>
 
 ## Usage
 * Press the escape button if you want to quit.
