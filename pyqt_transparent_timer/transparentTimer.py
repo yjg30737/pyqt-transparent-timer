@@ -23,6 +23,7 @@ class TransparentTimer(Timer):
                                     'border-radius: 10px; '
                                     'background-color: #AAAAAA;}'
                                     )
+
         self._timerLbl.setStyleSheet('QLabel { color: #DEDEDE; }')
 
         self.setMouseTracking(True)
