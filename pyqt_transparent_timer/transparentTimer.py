@@ -191,8 +191,8 @@ class TransparentTimer(QWidget):
 
             self.__timer.stop()
 
+            self.__startPauseBtn.setIcon('ico/play.svg')
             self.__startPauseBtn.setObjectName('start')
-            PyQtResourceHelper.setIcon([self.__startPauseBtn], ['ico/play.png'])
 
             self.__timer.timeout.disconnect(self.__timer_ticking)
             self.__startPauseBtn.clicked.disconnect(self.__pause_and_restart)
