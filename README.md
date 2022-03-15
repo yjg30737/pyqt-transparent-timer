@@ -8,8 +8,7 @@ PyQt5 >= 5.8
 ```pip3 install git+https://github.com/yjg30737/pyqt-transparent-timer.git --upgrade```
 
 ## Included Packages
-* <a href="https://github.com/yjg30737/pyqt-notifier.git">pyqt-notifier</a>
-* <a href="https://github.com/yjg30737/pyqt-svg-icon-pushbutton.git">pyqt-svg-icon-pushbutton</a>
+* <a href="https://github.com/yjg30737/pyqt-timer.git">pyqt-timer</a> - Parent package
 
 ## Usage
 * Press the escape button if you want to quit.
