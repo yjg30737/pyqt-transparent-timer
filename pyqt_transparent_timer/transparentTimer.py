@@ -3,10 +3,10 @@ from PyQt5.QtWidgets import QWidget, QApplication, \
     QVBoxLayout, QHBoxLayout, QPushButton, QDialog, QSizePolicy, qApp
 from PyQt5.QtCore import Qt, pyqtSignal, QTime, QTimer, QSettings
 from pyqt_notifier import NotifierWidget
-from pyqt_resource_helper import PyQtResourceHelper
 
 from pyqt_transparent_timer import TimerLabel
 from pyqt_transparent_timer.settingsDialog import SettingsDialog
+from pyqt_svg_icon_pushbutton.svgIconPushButton import SvgIconPushButton
 
 
 class TransparentTimer(QWidget):
@@ -30,18 +30,19 @@ class TransparentTimer(QWidget):
         self.__timer_lbl = TimerLabel()
         self.__timer_lbl.doubleClicked.connect(self.__settings)
 
-        self.__startPauseBtn = QPushButton()
-        self.__stopBtn = QPushButton()
-        self.__settingsBtn = QPushButton()
+        self.__startPauseBtn = SvgIconPushButton()
+        self.__stopBtn = SvgIconPushButton()
+        self.__settingsBtn = SvgIconPushButton()
 
         self.__startPauseBtn.setToolTip('Start')
         self.__stopBtn.setToolTip('Stop')
         self.__settingsBtn.setToolTip('Settings')
 
-        btns = [self.__startPauseBtn, self.__stopBtn, self.__settingsBtn]
+        self.__startPauseBtn.setIcon('ico/play.svg')
+        self.__stopBtn.setIcon('ico/stop.svg')
+        self.__settingsBtn.setIcon('ico/settings.svg')
 
-        PyQtResourceHelper.setStyleSheet(btns, ['style/button.css'])
-        PyQtResourceHelper.setIcon(btns, ['ico/play.png', 'ico/stop.png', 'ico/settings.png'])
+        btns = [self.__startPauseBtn, self.__stopBtn, self.__settingsBtn]
 
         lay = QHBoxLayout()
         lay.setAlignment(Qt.AlignCenter | Qt.AlignVCenter)
@@ -54,8 +55,7 @@ class TransparentTimer(QWidget):
         btnWidget.setLayout(lay)
         btnWidget.setStyleSheet('QWidget { '
                                 'border: 1px solid #444; '
-                                'padding: 5px; '
-                                'border-radius: 5px; '
+                                'border-radius: 10px; '
                                 'background-color: #888888;}'
                                 )
 
@@ -134,7 +134,7 @@ class TransparentTimer(QWidget):
                 # update the timer every second
                 self.__timer.start(1000)
                 self.__startPauseBtn.setObjectName('pause')
-                PyQtResourceHelper.setIcon([self.__startPauseBtn], ['ico/pause.png'])
+                self.__startPauseBtn.setIcon('ico/pause.svg')
                 self.__startPauseBtn.clicked.connect(self.__pause_and_restart)
 
                 self.__stopBtn.setEnabled(True)
@@ -152,11 +152,11 @@ class TransparentTimer(QWidget):
         try:
             if self.__startPauseBtn.objectName() == 'pause':
                 self.__timer.stop()
-                PyQtResourceHelper.setIcon([self.__startPauseBtn], ['ico/play.png'])
+                self.__startPauseBtn.setIcon('ico/play.svg')
                 self.__startPauseBtn.setObjectName('restart')
             elif self.__startPauseBtn.objectName() == 'restart':
                 self.__timer.start()
-                PyQtResourceHelper.setIcon([self.__startPauseBtn], ['ico/pause.png'])
+                self.__startPauseBtn.setIcon('ico/pause.svg')
                 self.__startPauseBtn.setObjectName('pause')
         except Exception as e:
             print(e)
@@ -209,7 +209,6 @@ class TransparentTimer(QWidget):
             print(sys.exc_info())
 
     def __settings(self):
-        print('settings')
         dialog = SettingsDialog()
         reply = dialog.exec()
         if reply == QDialog.Accepted:
