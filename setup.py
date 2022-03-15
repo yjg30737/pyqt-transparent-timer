@@ -14,6 +14,6 @@ setup(
         'PyQt5>=5.8',
         'pyqt-notifier @ git+https://git@github.com/yjg30737/pyqt-notifier.git@main',
         'pyqt-svg-icon-pushbutton @ git+https://git@github.com/yjg30737/pyqt-svg-icon-pushbutton.git@main',
-        'pyqt-notifier @ git+https://git@github.com/yjg30737/pyqt-timer.git@main'
+        'pyqt-timer @ git+https://git@github.com/yjg30737/pyqt-timer.git@main'
     ]
 )
