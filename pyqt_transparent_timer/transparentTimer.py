@@ -34,9 +34,8 @@ class TransparentTimer(Timer):
             painter = QPainter(self)
             painter.fillRect(self.rect(), QGradient.PremiumDark)
             pen = QPen(QColor('#777777'), 3)
-            painter.setRenderHint(QPainter.Antialiasing)
             painter.setPen(pen)
-            painter.drawRoundedRect(self.rect(), 10.0, 10.0)
+            painter.drawRect(self.rect())
         return super().paintEvent(e)
 
     def mousePressEvent(self, e):
