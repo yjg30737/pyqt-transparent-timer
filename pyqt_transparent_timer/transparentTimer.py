@@ -18,13 +18,9 @@ class TransparentTimer(Timer):
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
 
-        self._btnWidget.setStyleSheet('QWidget { '
-                                    'border: 1px solid #4A4A4A; '
-                                    'border-radius: 10px; '
-                                    'background-color: #AAAAAA;}'
-                                    )
+        self._btnWidget.setStyleSheet()
 
-        self._timerLbl.setStyleSheet('QLabel { color: #DEDEDE; }')
+        self._timerLbl.setStyleSheet()
 
         self.setMouseTracking(True)
         self._btnWidget.setMouseTracking(True)
