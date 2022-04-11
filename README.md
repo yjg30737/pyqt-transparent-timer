@@ -9,6 +9,7 @@ PyQt5 >= 5.8
 
 ## Included Packages
 * <a href="https://github.com/yjg30737/pyqt-timer.git">pyqt-timer</a> - Parent package
+* <a href="https://github.com/yjg30737/pyqt-resource-helper.git">pyqt-resource-helper</a>
 
 ## Usage
 * Press the escape button if you want to quit.
