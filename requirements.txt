@@ -1,2 +1,3 @@
 git+https://git@github.com/yjg30737/pyqt-timer.git@main
 git+https://git@github.com/yjg30737/pyqt-resource-helper.git@main
+git+https://git@github.com/yjg30737/pyqt-frameless-window.git@main

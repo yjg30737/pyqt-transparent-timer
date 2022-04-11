@@ -3,9 +3,10 @@ from PyQt5.QtWidgets import qApp
 from PyQt5.QtCore import Qt, pyqtSignal
 from pyqt_resource_helper import PyQtResourceHelper
 from pyqt_timer import Timer
+from pyqt_frameless_window.framelessWindow import FramelessWindow
 
 
-class TransparentTimer(Timer):
+class TransparentTimer(Timer, FramelessWindow):
     printSignal = pyqtSignal()
 
     def __init__(self, parent=None):
@@ -27,6 +28,8 @@ class TransparentTimer(Timer):
 
         self._btnWidget.setMinimumHeight(self._btnWidget.sizeHint().height()*1.2)
 
+        self.setPressToMove(True)
+
     def paintEvent(self, e):
         if self.testAttribute(Qt.WA_TranslucentBackground):
             pass
@@ -37,22 +40,6 @@ class TransparentTimer(Timer):
             painter.setPen(pen)
             painter.drawRect(self.rect())
         return super().paintEvent(e)
-
-    def mousePressEvent(self, e):
-        if e.button() == Qt.LeftButton:
-            p = e.pos()
-            self.__offset = p
-            self.__moving = True
-        return super().mousePressEvent(e)
-
-    def mouseMoveEvent(self, e):
-        if self.__moving:
-            self.move(e.globalPos() - self.__offset)
-        return super().mouseMoveEvent(e)
-
-    def mouseReleaseEvent(self, e):
-        self.__moving = False
-        return super().mouseReleaseEvent(e)
 
     def enterEvent(self, e):
         self.setAttribute(Qt.WA_TranslucentBackground, False)
