@@ -56,13 +56,13 @@ class TransparentTimer(Timer):
         return super().mouseReleaseEvent(e)
 
     def enterEvent(self, e):
-        self.setFixedSize(self.sizeHint().width() + 1, self.sizeHint().height() + 1)
         self.setAttribute(Qt.WA_TranslucentBackground, False)
+        self.repaint()
         return super().enterEvent(e)
 
     def leaveEvent(self, e):
-        self.setFixedSize(self.sizeHint().width(), self.sizeHint().height())
         self.setAttribute(Qt.WA_TranslucentBackground, True)
+        self.repaint()
         return super().leaveEvent(e)
 
     def keyPressEvent(self, e):
