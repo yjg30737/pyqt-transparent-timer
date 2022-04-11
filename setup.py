@@ -12,6 +12,7 @@ setup(
     url='https://github.com/yjg30737/pyqt-transparent-timer.git',
     install_requires=[
         'PyQt5>=5.8',
-        'pyqt-timer @ git+https://git@github.com/yjg30737/pyqt-timer.git@main'
+        'pyqt-timer @ git+https://git@github.com/yjg30737/pyqt-timer.git@main',
+        'pyqt-resource-helper @ git+https://git@github.com/yjg30737/pyqt-resource-helper.git@main'
     ]
 )
