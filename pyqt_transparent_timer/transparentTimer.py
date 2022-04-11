@@ -1,6 +1,7 @@
 from PyQt5.QtGui import QPainter, QColor, QPen, QGradient
 from PyQt5.QtWidgets import QApplication, qApp
 from PyQt5.QtCore import Qt, pyqtSignal
+from pyqt_resource_helper import PyQtResourceHelper
 from pyqt_timer import Timer
 
 
@@ -18,9 +19,8 @@ class TransparentTimer(Timer):
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
 
-        self._btnWidget.setStyleSheet()
-
-        self._timerLbl.setStyleSheet()
+        PyQtResourceHelper.setStyleSheet([self._btnWidget], ['styles/btn_widget.css'])
+        PyQtResourceHelper.setStyleSheet([self._timerLbl], ['styles/timer_lbl.css'])
 
         self.setMouseTracking(True)
         self._btnWidget.setMouseTracking(True)
