@@ -1,5 +1,5 @@
 from PyQt5.QtGui import QPainter, QColor, QPen, QGradient
-from PyQt5.QtWidgets import QApplication, qApp
+from PyQt5.QtWidgets import qApp
 from PyQt5.QtCore import Qt, pyqtSignal
 from pyqt_resource_helper import PyQtResourceHelper
 from pyqt_timer import Timer
