@@ -68,12 +68,3 @@ class TransparentTimer(Timer):
         if e.key() == Qt.Key_Escape:
             qApp.exit()
         return super().keyPressEvent(e)
-
-
-if __name__ == "__main__":
-    import sys
-
-    app = QApplication(sys.argv)
-    timer = TransparentTimer()
-    timer.show()
-    app.exec_()
