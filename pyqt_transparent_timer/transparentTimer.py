@@ -26,6 +26,7 @@ class TransparentTimer(Timer, FramelessWindow):
         self.setMouseTracking(True)
         self._btnWidget.setMouseTracking(True)
 
+        self._btnWidget.setMinimumWidth(self._btnWidget.sizeHint().width()*1.2)
         self._btnWidget.setMinimumHeight(self._btnWidget.sizeHint().height()*1.2)
 
         self.setPressToMove(True)
