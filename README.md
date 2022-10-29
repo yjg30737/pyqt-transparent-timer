@@ -9,7 +9,7 @@ PyQt5 >= 5.8
 
 ## Included Packages
 * <a href="https://github.com/yjg30737/pyqt-timer.git">pyqt-timer</a> - Parent package
-* <a href="https://github.com/yjg30737/pyqt-frameless-window.git">pyqt-frameless-window(v0.0.61, Classic)</a>
+* <a href="https://github.com/yjg30737/pyqt-frameless-window.git">pyqt-frameless-window(v0.0.61, Legacy)</a>
 * <a href="https://github.com/yjg30737/pyqt-resource-helper.git">pyqt-resource-helper</a>
 
 ## Usage
